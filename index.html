@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя сайт-визитка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .section1 {
+            position: relative;
+            text-align: center;
+            color: rgb(100, 11, 97);
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        .section1 img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.5;
+        }
+        .section1 img.second {
+            left: 50%;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+        .content h1 {
+            margin: 100px 0;
+            font-size: 2em;
+        }
+        .content h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .content p {
+            margin: 20px 0;
+            font-size: 1em;
+        }
+        .content a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: rgb(100, 11, 97);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Контейнер для Flexbox */
+        .achievements-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /* Карточки достижений */
+        .achievement-card {
+            flex: 1 1 30%;
+            margin: 1vh;
+            padding: 2vh;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(98, 12, 106, 0.884);
+        }
+
+        /* Изображения в карточках */
+        .achievement-card img {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 1vh;
+            border-radius: 10px;
+        }
+
+        /* Заголовки в карточках */
+        .achievement-card h3 {
+            font-size: 1.5em;
+            margin-top: 1vh;
+        }
+
+        /* Описание в карточках */
+        .achievement-card p {
+            font-size: 1em;
+        }
+
+        /* Секция "Технологии, которыми я владею" */
+        .skills {
+            background-color: #e6f7ff;
+            padding: 5vh 0;
+        }
+        .skills .container {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .skills h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 2vh;
+        }
+        .skills-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1vh;
+        }
+        .skill-card {
+            padding: 2vh;
+            background-color: #efa5e7;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(98, 12, 106, 0.884);
+            text-align: center;
+        }
+        .skill-card img {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 1vh;
+            border-radius: 10px;
+        }
+        .skill-card h3 {
+            font-size: 1.5em;
+            margin: 1vh 0;
+        }
+        .skill-card p {
+            font-size: 1em;
+        }
+
+        /* Адаптивный дизайн для мобильных устройств */
+        @media (max-width: 768px) {
+            .achievements-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .achievement-card {
+                flex: 1 1 90%;
+            }
+            .skills-cards {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Секция 1: Приветствие -->
+    <div class="section1">
+        <img src="я.jpg" >
+        <img src="вязание3.jpg" class="second">
+        <div class="content">
+            <h1>Привет! <p>Я Алёна — мастер по вязанию</p></h1>
+            <h3>Создаю уникальные вязаные изделия на заказ</h3>
+            <p>Мой опыт позволяет создавать уютные и стильные изделия, идеально подходящие для любых потребностей</p>
+            <a href="#contact">Связаться со мной</a>
+        </div>
+    </div>
+
+    <!-- Секция 2: Мои достижения -->
+    <section class="achievements" style="background-color: #fdcefa; padding: 5vh 0;">
+        <div class="container" style="max-width: 1440px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 2vh;">Мои достижения</h2>
+            <div class="achievements-cards">
+                <!-- Достижение 1 -->
+                <div class="achievement-card" style="flex: 1 1 30%; margin: 1vh; padding: 2vh; background-color: #efa5e7; border-radius: 10px; box-shadow: 0 4px 8px rgba(98, 12, 106, 0.884);">
+                    <img src="конкурс.jpg" style="width: 100%; border-radius: 10px;">
+                    <h3 style="font-size: 1.5em; margin-top: 1vh;">Первое место на конкурсе вязания</h3>
+                    <p style="font-size: 1em;">Заняла первое место на международном конкурсе вязания в 2022 году.</p>
+                </div>
+                <!-- Достижение 2 -->
+                <div class="achievement-card" style="flex: 1 1 30%; margin: 1vh; padding: 2vh; background-color: #efa5e7; border-radius: 10px; box-shadow: 0 4px 8px rgba(98, 12, 106, 0.884);">
+                    <img src="публикация.webp" style="width: 100%; border-radius: 10px;">
+                    <h3 style="font-size: 1.5em; margin-top: 1vh;">Публикация в журнале</h3>
+                    <p style="font-size: 1em;">Мои работы были опубликованы в известном журнале "Вязание и мода".</p>
+                </div>
+                <!-- Достижение 3 -->
+                <div class="achievement-card" style="flex: 1 1 30%; margin: 1vh; padding: 2vh; background-color: #efa5e7; border-radius: 10px; box-shadow: 0 4px 8px rgba(98, 12, 106, 0.884);">
+                    <img src="вязание4.jpg" style="width: 100%; border-radius: 10px;">
+                    <h3 style="font-size: 1.5em; margin-top: 1vh;">Создание уникальной коллекции</h3>
+                    <p style="font-size: 1em;">Создала уникальную коллекцию вязаных изделий для модного показа.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция 3: Технологии, которыми я владею -->
+    <section class="skills" style="background-color: #fdcefa; padding: 5vh 0;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 2vh;">Технологии, которыми я владею</h2>
+            <div class="skills-cards">
+                <!-- Технология 1 -->
+                <div class="skill-card">
+                    <img src="вязание крючком.jpeg">
+                    <h3>Вязание крючком</h3>
+                    <p>Мастерски владею техниками вязания крючком для создания различных изделий.</p>
+                </div>
+                <!-- Технология 2 -->
+                <div class="skill-card">
+                    <img src="вязание на спицах.jpg">
+                    <h3>Вязание на спицах</h3>
+                    <p>Умею вязать на спицах, создавая красивые и прочные изделия.</p>
+                </div>
+              <!-- Технология 3 -->
+                                <div class="skill-card">
+                                    <img src="машинное вязание.jpg">
+                                    <h3>Машинное вязание</h3>
+                                    <p>Использую вязальные машины для создания сложных и многослойных изделий.</p>
+                                </div>
+                                <!-- Технология 4 -->
+                                <div class="skill-card">
+                                    <img src="вышивка.jpg">
+                                    <h3>Вышивка</h3>
+                                    <p>Владею техникой вышивки для украшения вязаных изделий.</p>
+                                </div>
+                                <!-- Технология 5 -->
+                                <div class="skill-card">
+                                    <img src="узоры.jpg">
+                                    <h3>Дизайн узоров</h3>
+                                    <p>Разрабатываю уникальные узоры и схемы для вязания.</p>
+                                </div>
+                                <!-- Технология 6 -->
+                                <div class="skill-card">
+                                    <img src="пряжа.jpg">
+                                    <h3>Работа с пряжей</h3>
+                                    <p>Профессионально подбираю виды пряжи и её сочетания для разных проектов.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                </body>
+                </html>
+                
